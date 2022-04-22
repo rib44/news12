@@ -1,0 +1,25 @@
+{% extends "layout.html" %} {% block title %} Top Headlines {% endblock %} {%
+block main %}
+<section>
+  <div class="top">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/330px-News_12_logo_2019.png"
+      alt="News12"
+    />
+  </div>
+
+  {% for title,desc,img,p_date,url in contents %}
+
+  <div class="card inline" style="width: 18rem">
+    <img class="image" src="{{img}}" alt="news-pic" />
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{desc}}</p>
+      <a href="{{url}}" class="btn btn-primary" target="_blank">More...</a>
+    </div>
+  </div>
+
+  {% endfor %}
+</section>
+
+{% endblock %}

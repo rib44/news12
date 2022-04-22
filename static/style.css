@@ -1,0 +1,13 @@
+.top{
+    display: flex;
+    justify-content: center;
+}
+
+.inline{
+    display: inline-block;
+}
+
+.image{
+    height: auto;
+    width: 99%;
+}
